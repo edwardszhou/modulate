@@ -16,6 +16,7 @@ io.sockets.on('connection', newConnection);
 function newConnection(socket) {
     console.log('new connection: ' + socket.id);
 
+    // handles pitch and user data {data: [pitch graph], ballHeight: [ball height], bkgd: vol}
     socket.on('data', dataMsg);
     function dataMsg(data) {
         socket.broadcast.emit('data', data)
