@@ -1,6 +1,6 @@
 # modulate
 
-Pitch-Based Infinite Scroller Game in Blender
+Pitch-Based Infinite Scroller Game in Blender (3.2.2)
 
 Edward Zhou 12/2022
 
@@ -15,5 +15,3 @@ To run game:
 3. Connect to server via web browser (NOT Google Chrome)
 4. Run Blender script
 5. Game is running, render Blender viewport as desired
-
-Note: 
