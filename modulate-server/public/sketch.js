@@ -4,7 +4,6 @@
 // https://opensource.org/licenses/MIT
 
 /* ===
-ml5 Example
 Basic Pitch Detection
 === */
 
@@ -63,7 +62,6 @@ function draw() {
   stroke(0, 0, 250)
 
   for(let i = 1; i < waveformPoints.length; i++) {
-    //circle(width/50*i,height-waveformPoints[i],width/100)
     line(width/50*(i-1), height - waveformPoints[i-1], width/50*i, height - waveformPoints[i])
   }
 
@@ -110,11 +108,7 @@ function sendData() {
     ballHeight: ball.y.toFixed(2),
     bkgd: vol
   }
-  // let encodedData = encoder.encode();
-  // console.log(encodedData)
-  // console.log(data)
   socket.emit('data', data)
-  //console.log(data);
 }
 function getPitch() {
   pitch.getPitch(
@@ -159,18 +153,6 @@ function getPitch() {
       getPitch();
     }
   )
-}
-function smoothThatShit(values, alpha) {
-  var weighted = average(values) * alpha;
-  var smoothed = [];
-  for (var i in values) {
-      var curr = values[i];
-      var prev = smoothed[i - 1] || values[values.length - 1];
-      var next = curr || values[0];
-      var improved = Number(this.average([weighted, prev, curr, next]).toFixed(2));
-      smoothed.push(improved);
-  }
-  return smoothed;
 }
 
 function average(data) {
