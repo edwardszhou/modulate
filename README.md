@@ -1,4 +1,4 @@
-# modulate
+# Modulate
 
 Pitch-Based Infinite Scroller Game in Blender (3.2.2)
 
